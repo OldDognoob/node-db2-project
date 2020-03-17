@@ -4,7 +4,11 @@
     "description": "Node DB 2 Module Challenge",
     "main": "index.js",
     "scripts": {
-        "server": "nodemon index.js"
+        "server": "nodemon index.js",
+        "migrateup":"knex migrate:up",
+        "migratedown":"knex migrate:down",
+        "migraterollback":"knex migrate:latest",
+        "seed":"knex seed:run"
     },
     "author": "Lambda School",
     "devDependencies": {
