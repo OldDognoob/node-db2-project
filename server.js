@@ -2,7 +2,7 @@
 const express = require("express");
 const helmet = require("helmet");
 //Import routers
-const carRouter = require("../cars/cars-router");
+const carRouter = require("./cars/cars-router");
 //Activate imports
 const server = express();
 //Inject import functionality
@@ -12,6 +12,6 @@ server.use(express.json());
 server.use("/api/cars", carRouter);
 //Initial requests
 server.get("/", (req, res) => {
-  res.send("<h1>Welcome to the cars API!</h1>");
+  res.status("<h1>Welcome to the cars API!</h1>");
 });
 module.exports = server;

@@ -23,9 +23,9 @@ function updateCar({ id, VIN, make, model, mileage, transmissionType, clean }) {
     .where({ id })
     .update({ VIN, make, model, mileage, transmissionType, clean });
 }
-function deleteCar(id) {
+function deleteCarById(id) {
   return db("cars")
     .where({ id })
-    .del();
+    .delete();
 }
-module.exports = { getAllCars, getCarById, insertNewCar, updateCar, deleteCar };
+module.exports = { getAllCars, getCarById, insertNewCar, updateCar, deleteCarById };
