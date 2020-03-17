@@ -62,8 +62,8 @@ router.get("/", (req, res) => {
     const { id } = req.params;
     const { VIN, make, model, mileage, transmissionType, clean } = req.body;
    cars.updateCar({ id, VIN, make, model, mileage, transmissionType, clean })
-      .then(car => {
-        if (car) {
+      .then(cars => {
+        if (cars) {
           res.status(200).json({
             message: "Car has been updated successfull"
           });
